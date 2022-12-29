@@ -1,5 +1,5 @@
 {
-  "name": "lets-play-clean-architecture",
+  "name": "payzen-mock",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -19,8 +19,8 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "docker:build": "docker build -t lets-play-clean-architecture .",
-    "postdocker:build": "docker run -it lets-play-clean-architecture yarn test"
+    "docker:build": "docker build -t payzen-mock .",
+    "postdocker:build": "docker run -it payzen-mock yarn test"
   },
   "volta": {
     "node": "16.14.0",

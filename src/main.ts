@@ -14,8 +14,7 @@ async function bootstrap() {
     stopAtFirstError: true
   }));
   const options = new DocumentBuilder()
-    .setTitle("lets-play-clean-architecture example")
-    .setDescription("infance's cartoons")
+    .setTitle("payzen-mock")
     .setVersion("1.0")
     .build();
   const document = SwaggerModule.createDocument(app, options);
