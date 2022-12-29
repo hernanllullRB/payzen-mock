@@ -1,0 +1,8 @@
+rest:
+  client:
+    default:
+      timeout: 10001
+service:
+  uri:
+    pokemon: https://pokeapi.co/api/v2/pokemon/
+    digimon: https://digimon-api.vercel.app/api/digimon/name/
