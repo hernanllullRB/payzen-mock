@@ -78,8 +78,7 @@ class ContactsSchema {
 
   @IsNotEmpty()
   @ValidateNested()
-  @Type(() => ContactSchema)
-  incident: ContactSchema
+  incident: any
 }
 
 export class CompanyRequestBody {

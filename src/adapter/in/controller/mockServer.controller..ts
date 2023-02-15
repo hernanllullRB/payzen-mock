@@ -23,10 +23,19 @@ function generateRandomId(length) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
 
-  return result.trim();
+  return result
+    .replace(/-/g, "")
+    .trim()
+    .split("")
+    .map((letter) =>
+      /[a-f0-9]/.test(letter)
+        ? letter
+        : String.fromCharCode(Math.floor(Math.random() * 6) + 97)
+    )
+    .join("")
 }
 
-@Controller("api/v1/")
+@Controller("v1/")
 export class MockServerControllerAdapter {
   private readonly logger = new Logger(MockServerControllerAdapter.name);
 
@@ -147,7 +156,7 @@ export class MockServerControllerAdapter {
     };
   }
 
-  @Post("merchants")
+  @Post("merchant-ids")
   @HttpCode(HttpStatus.CREATED)
   async createMerchant(@Body() body: MerchantRequestBody): Promise<any> {
     return {
